@@ -10,8 +10,12 @@ while True:
     modo = input("\n Converter para fahrenheit ou kelvin?\n1=fahrenheit\n2=kelvin\n\t")
     try:
         if float(modo) == 1:
-            celsius = float(celsius)*33.8
-            print(f"\nVocê detem {celsius}")
+            fahrenheit = float(celsius)*1.8 + 32
+            print(f"\nVocê detem {fahrenheit}° fahrenheit")
+            break
+        if float(modo) == 2:
+            kelvin = float(celsius)+273,15
+            print(f"\nVocê detem {kelvin}° kelvin")
             break
     except ValueError:
         print("***Resposta inapropriada***\n")
